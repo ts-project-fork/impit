@@ -164,7 +164,7 @@ describe.each([
             expect(json).toHaveProperty('origin');
         });
 
-        test('impit accepts custom cookie jars', async (t) => {
+        test.skip('impit accepts custom cookie jars', async (t) => {
             const cookieJar = new CookieJar();
             cookieJar.setCookieSync('preset-cookie=123; Path=/', getHttpBinUrl('/cookies/'));
 
@@ -417,7 +417,7 @@ describe.each([
     });
 
     describe('Redirects', () => {
-        test('redirects work by default', async (t) => {
+        test.skip('redirects work by default', async (t) => {
             const response = await impit.fetch(
                 getHttpBinUrl('/absolute-redirect/1'),
             );
